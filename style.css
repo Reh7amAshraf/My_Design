@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    width: 90vw;
+    margin: auto;
+}
+
+.image-section img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.content-section {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 5vw;
+    color: #336699;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.giveaway-end {
+    font-size: 3.5vw;
+    color: #555;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.description {
+    font-size: 3vw;
+    color: #777;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.countdown {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+}
+
+.countdown-item {
+    background-color: #1a73e8;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    width: 22%;
+}
+
+.countdown-item span {
+    display: block;
+    font-size: 6vw;
+    font-weight: bold;
+}
+
+.countdown-item p {
+    font-size: 3vw;
+    margin-top: 5px;
+}
+
+/* Media Queries for Tablets and Laptops */
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+        max-width: 1024px;
+        padding: 20px;
+        flex-wrap: wrap; /* Ensure wrapping if needed */
+    }
+
+    .image-section {
+        flex: 1; /* Ensure the image takes its space properly */
+        max-width: 40%; /* Constrain image width */
+    }
+
+    .image-section img {
+        width: 100%; /* Ensure the image resizes properly */
+        height: auto;
+        border-radius: 5px;
+    }
+
+    .content-section {
+        flex: 2; /* Allow text to take more space */
+        margin-left: 30px;
+        align-items: flex-start;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .giveaway-end, .description {
+        font-size: 16px;
+    }
+
+    .countdown-item span {
+        font-size: 24px;
+    }
+
+    .countdown-item p {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        width: 70vw;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .giveaway-end, .description {
+        font-size: 18px;
+    }
+
+    .image-section {
+        max-width: 35%; /* Adjust this if needed */
+    }
+}
